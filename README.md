@@ -1,0 +1,5 @@
+"# cog" 
+"# cog" 
+"# zadanie_kalkulator_s" 
+"# zadanie_kalkulator_s" 
+"# zadanie_kalkulator_s" 

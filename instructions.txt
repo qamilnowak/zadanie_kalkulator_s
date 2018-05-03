@@ -1,0 +1,14 @@
+Building 
+
+To build the project use following command:
+mvn exec:java
+
+Application works on http://localhost:8080/
+
+*http://localhost:8080/api/book/{ISBN}
+*http://localhost:8080/api/rating
+
+Deployed on heroku server:
+*https://stark-garden-29339.herokuapp.com/api/book/all
+*https://stark-garden-29339.herokuapp.com/api/book/{ISBN}
+*https://stark-garden-29339.herokuapp.com/api/rating
