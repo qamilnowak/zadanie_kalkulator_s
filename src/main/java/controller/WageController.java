@@ -1,11 +1,7 @@
 package controller;
 import java.util.Collection;
 import model.Wage;
-
 import org.springframework.beans.factory.annotation.Autowired;
-
-
-
 import org.springframework.web.bind.annotation.*;
 import service.WageService;
 
@@ -23,19 +19,13 @@ public class WageController {
 
 
     @RequestMapping(value="/wages1", method = RequestMethod.POST)
-public void rap(@RequestBody Wage wage){
-
+    public void rap(@RequestBody Wage wage){
         System.out.println(wage.getKwota());
         System.out.println(wage.getWaluta());
         ws.updateWages(wage.getKwota(), wage.getWaluta());
 
     }
 
-
-    @RequestMapping(value="/wages2", method = RequestMethod.POST)
-    public String greetingSubmit(@ModelAttribute Wage wage) {
-        return "result";
-    }
 
 }
 

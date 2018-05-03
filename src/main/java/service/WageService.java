@@ -1,8 +1,6 @@
 package service;
-
 import java.net.URL;
 import java.util.*;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import model.*;
 import org.springframework.stereotype.Service;
@@ -26,7 +24,6 @@ public class WageService {
 	}
 
 	public Collection<Wage> getWages() {
-		System.out.println("G6");
 		return wages.values();
 	}
 	public Collection<Wage> updateWages(double kwota, String waluta) {

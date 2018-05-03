@@ -38,9 +38,4 @@ public class Rates
         this.effectiveDate = effectiveDate;
     }
 
-    @Override
-    public String toString()
-    {
-        return null;
-    }
 }
