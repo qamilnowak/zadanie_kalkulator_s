@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4138e76e-226f-4caf-be55-94a3d7aed91f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/WageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/WageService.java" afterDir="false" />
-    </list>
+    <list default="true" id="4138e76e-226f-4caf-be55-94a3d7aed91f" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -365,12 +363,12 @@
       <workItem from="1525125669885" duration="16770000" />
       <workItem from="1525266725193" duration="58000" />
       <workItem from="1525266947268" duration="6485000" />
-      <workItem from="1525275296425" duration="33221000" />
+      <workItem from="1525275296425" duration="34544000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124508000" />
+    <option name="totallyTimeSpent" value="125831000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -394,10 +392,10 @@
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3298969" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3298969" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.3298969" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32842416" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24899329" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24899329" />
       <window_info anchor="right" id="Bean Validation" order="8" weight="0.3295302" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="7" />
