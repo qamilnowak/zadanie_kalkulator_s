@@ -8,35 +8,40 @@ import model.*;
 import org.springframework.stereotype.Service;
 
 @Service
-public class BooksService {
+public class WageService {
 	Hashtable<String, NBP> books = new Hashtable<>();
 	ObjectMapper objectMapper = new ObjectMapper();
 	ObjectMapper objectMapper1 = new ObjectMapper();
-	Hashtable<String, Wage> wages = new Hashtable<>();
-	public BooksService() throws Exception{
+	Hashtable<Integer, Wage> wages = new Hashtable<>();
+	double euro = 0;
+	double funt = 0;
+	double poObliczeniach =0;
+	public WageService() throws Exception{
 		NBP eur = objectMapper.readValue(new URL("http://api.nbp.pl/api/exchangerates/rates/a/eur/?format=json"), NBP.class );
 		NBP gbp = objectMapper1.readValue(new URL("http://api.nbp.pl/api/exchangerates/rates/a/gbp/?format=json"), NBP.class );
-
+		euro = eur.getRates().get(0).getMid();
+		funt = gbp.getRates().get(0).getMid();
 		System.out.println(eur.getRates().get(0).getMid());
 		System.out.println(gbp.getRates().get(0).getMid());
-
-		Wage a = new Wage();
-		a.setKwota(12);
-		a.setWaluta("EUR");
-
-		a.setKwota(a.getKwota() * eur.getRates().get(0).getMid());
-		wages.put(a.getWaluta(), a);
-
 	}
 
 	public Collection<Wage> getWages() {
+		System.out.println("G6");
 		return wages.values();
 	}
-	public Collection<Wage> updateWages(double kwotka) {
-		Wage b = new Wage();
-b.setKwota(1);
-b.setWaluta("PLN");
-		wages.put(b.getWaluta(),b);
+	public Collection<Wage> updateWages(double kwota, String waluta) {
+		Wage a = new Wage();
+		if (waluta.equals("EUR")){
+			poObliczeniach = 22*kwota * euro;
+		}else if(waluta.equals("GBP")) {
+			poObliczeniach = 22*kwota * funt;
+		}else if(waluta.equals("PLN")) {
+				poObliczeniach = 22*kwota;
+		}
+		a.setKwota(poObliczeniach);
+		a.setWaluta(waluta);
+		wages.put(1,a);
+		getWages();
 		return wages.values();
 	}
 }

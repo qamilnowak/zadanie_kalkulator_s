@@ -3,24 +3,22 @@ import java.util.Collection;
 import model.Wage;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
+
 
 
 import org.springframework.web.bind.annotation.*;
-import service.BooksService;
+import service.WageService;
 
 @RestController
 @RequestMapping("/api")
-public class BooksController {
+public class WageController {
 
 	@Autowired
-	BooksService bs;
+    WageService ws;
 
     @RequestMapping("/wages")
     public  Collection<Wage> getWages() {
-        return bs.getWages();
+        return ws.getWages();
     }
 
 
@@ -29,7 +27,7 @@ public void rap(@RequestBody Wage wage){
 
         System.out.println(wage.getKwota());
         System.out.println(wage.getWaluta());
-  //      bs.updateWages(wage.getKwota());
+        ws.updateWages(wage.getKwota(), wage.getWaluta());
 
     }
 

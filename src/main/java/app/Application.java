@@ -8,9 +8,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @EnableAutoConfiguration
 @ComponentScan({"controller","service"})
-public class DemoApplication {
+public class Application {
   //Main
-    public static void main(String[] args) {SpringApplication.run(DemoApplication.class, args);}
+    public static void main(String[] args) {SpringApplication.run(Application.class, args);}
 
     }
 
