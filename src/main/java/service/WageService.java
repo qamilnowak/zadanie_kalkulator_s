@@ -32,11 +32,11 @@ public class WageService {
 	public Collection<Wage> updateWages(double kwota, String waluta) {
 		Wage a = new Wage();
 		if (waluta.equals("EUR")){
-			poObliczeniach = 22*kwota * euro;
+			poObliczeniach = 0.8*(22*kwota - 800) * euro;
 		}else if(waluta.equals("GBP")) {
-			poObliczeniach = 22*kwota * funt;
+			poObliczeniach = 0.75*(22*kwota - 600) * funt;
 		}else if(waluta.equals("PLN")) {
-				poObliczeniach = 22*kwota;
+				poObliczeniach = 0.81*(22*kwota-1200);
 		}
 		a.setKwota(poObliczeniach);
 		a.setWaluta(waluta);
